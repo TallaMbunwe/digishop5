@@ -24,6 +24,11 @@ public class CustomerController {
 		Customer customer = new Customer("Sandeep Sharma", "sandeep@abc.com", 9876543210L);
 		return customerRepository.save(customer);
 	}
+	
+	 @RequestMapping("/api/helloworld")
+	  public String findAll(){
+	    return "Hello World!";
+	  }
 
 	@GetMapping("/saveAll")
 	public Iterable<Customer> saveAllCustomer() {
